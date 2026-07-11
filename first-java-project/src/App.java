@@ -6,5 +6,11 @@ public class App{
 
         int sum = x + y;
         System.out.println(sum);
+        
+        int total = 0;
+
+        for(int i = 0; i <5 ; i++){
+            total += 1;
+        }
     }
 }
