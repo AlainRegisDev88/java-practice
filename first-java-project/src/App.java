@@ -12,5 +12,6 @@ public class App{
         for(int i = 0; i <5 ; i++){
             total += 1;
         }
+        System.out.println(total);
     }
 }
