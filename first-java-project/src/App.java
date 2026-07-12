@@ -13,5 +13,23 @@ public class App{
             total += 1;
         }
         System.out.println(total);
+
+        // testing the stack storage of the primitive variables
+
+        int a = 4;
+        int b = a;
+        b = 10;
+
+        int [] arr1 = {1, 2, 3}; 
+        int [] arr2 = arr1; 
+
+        arr2 [0] = 100;
+
+        System.out.println('\n');
+        System.out.println(arr1[0]);
+
+        System.out.println('\n');
+        System.out.println(b);
+
     }
 }
