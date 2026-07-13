@@ -31,5 +31,10 @@ public class App{
         System.out.println('\n');
         System.out.println(b);
 
+        // byte check
+
+        byte bi = 3;
+        System.out.println(bi);
+
     }
 }
