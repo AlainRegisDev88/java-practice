@@ -1,5 +1,18 @@
 public class App{
+
+    public void pupAge(){
+        int age = 0;
+        age += 10;
+        System.out.println(age);
+    }
     public static void main(String [] args) throws Exception {
+
+        // call the instance method pupAge
+
+        App obj = new App();
+
+        obj.pupAge();
+
         System.out.println("Hello World");
         int x = 5;
         int y = 7;
@@ -56,6 +69,8 @@ public class App{
 
 
         System.out.println(inc_res);
+
+
         
     }
 }
