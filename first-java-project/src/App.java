@@ -36,5 +36,26 @@ public class App{
         byte bi = 3;
         System.out.println(bi);
 
+        // exercise 1
+
+        int result  = 2 + 3 * 4;
+        System.out.println("Exercise 1: " + result);
+
+        // short-circuit evaluation 
+
+        boolean r = true || 5 > 6;
+
+        System.out.println(r);
+
+        // increment operators
+
+        int m = 5;
+        int inc_res = m++ + ++m;
+
+        // the first increment affect the inc_res value but the second one doesn't, it increment m after operation
+
+
+        System.out.println(inc_res);
+        
     }
 }
