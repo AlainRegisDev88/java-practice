@@ -22,6 +22,12 @@ class Adder {
 class DegreeConverter {
     Scanner in = new Scanner(System.in);
 
+    private double rounder(int decimalPlaces, double value){
+        double multiplier = 10 * decimalPlaces; 
+        double roundedValue = Math.round(value * multiplier) / multiplier;
+        return roundedValue;
+    }
+
     private double celsInput() {
         double celsDeg;
         System.out.println("Enter the celsius temperature: ");
@@ -40,8 +46,8 @@ class DegreeConverter {
         double tempInCels;
 
         tempInCels = (tempInFahr - 32) * (5.0 / 9);
-        
 
+        tempInCels = rounder(2, tempInCels);
         return tempInCels;
     }
 
@@ -49,6 +55,8 @@ class DegreeConverter {
         double tempInFahr;
 
         tempInFahr = (tempInCels * (9.0 / 5)) + 32;
+
+        tempInFahr = rounder(2, tempInFahr);
         return tempInFahr;
     }
 
