@@ -23,22 +23,26 @@ class Adder {
 class DegreeConverter {
     Scanner in = new Scanner(System.in);
 
-    public void input() {
+    public double input() {
 
         double fahrDeg;
         double celsDeg;
 
-        System.out.println("Enter F for farhenheit to celcius conversion and C otherwise: ");
+        System.out.println("Enter F for farhenheit to celsius conversion and C otherwise: ");
 
         String res = in.nextLine();
 
         if (res.equalsIgnoreCase("f")) {
             System.out.println("Enter the fahrnheit temperature: ");
             fahrDeg = in.nextDouble();
+            return fahrDeg;
         } else if (res.equalsIgnoreCase("c")) {
-            System.out.println("Enter the celciusw temperature: ");
+            System.out.println("Enter the celsius temperature: ");
             celsDeg = in.nextDouble();
-        }
+            return celsDeg;
+        }else{
+            throw new IllegalArgumentException("Invalid input: please enter F or C");
+        } 
 
     }
 
@@ -48,6 +52,14 @@ class DegreeConverter {
         tempInDeg = (tempInFahr - 32) * (5 / 9);
         return tempInDeg;
     }
+    
+    private double celcToFahr(double tempInCels) {
+        double tempInDeg;
+
+        tempInDeg = (tempInCels - 32) * (5 / 9);
+        return tempInDeg;
+    }
+}
 }
 
 public class App {
