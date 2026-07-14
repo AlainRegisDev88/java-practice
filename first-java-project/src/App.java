@@ -39,14 +39,16 @@ class DegreeConverter {
     private double fahrToCelc(double tempInFahr) {
         double tempInCels;
 
-        tempInCels = (tempInFahr - 32) * (5 / 9);
+        tempInCels = (tempInFahr - 32) * (5.0 / 9);
+        
+
         return tempInCels;
     }
 
     private double celsToFahr(double tempInCels) {
         double tempInFahr;
 
-        tempInFahr = (tempInCels * (9 / 5)) + 32;
+        tempInFahr = (tempInCels * (9.0 / 5)) + 32;
         return tempInFahr;
     }
 
