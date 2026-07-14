@@ -1,3 +1,4 @@
+import java.security.DrbgParameters.Reseed;
 import java.util.Scanner;
 
 class Adder {
@@ -17,6 +18,30 @@ class Adder {
         return sum;
     }
 
+}
+
+class DegreeConverter{
+    Scanner in =  new Scanner(System.in);
+    public void input(){
+
+        double fahrDeg;
+        double celsDeg;
+
+
+        System.out.println("Enter F for farhenheit to celcius conversion and C otherwise: ");
+
+        String res = in.nextLine();
+
+        if (res.equalsIgnoreCase("f")){
+            System.out.println("Enter the fahrnheit temperature: ");
+            fahrDeg = in.nextDouble();
+        }
+        else if(res.equalsIgnoreCase("c")){
+            System.out.println("Enter the celcius temperature: ");
+            celsDeg = in.nextDouble();
+        }
+
+    }
 }
 
 public class App {
