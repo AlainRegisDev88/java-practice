@@ -22,8 +22,8 @@ class Adder {
 class DegreeConverter {
     Scanner in = new Scanner(System.in);
 
-    private double rounder(int decimalPlaces, double value){
-        double multiplier = Math.pow(10, decimalPlaces); 
+    private double rounder(int decimalPlaces, double value) {
+        double multiplier = Math.pow(10, decimalPlaces);
         double roundedValue = Math.round(value * multiplier) / multiplier;
         return roundedValue;
     }
@@ -85,17 +85,15 @@ class DegreeConverter {
 }
 
 class SwappInPlace {
-    int [] arr = {10, 20, 30};
-    int i = 20;
-    int j = 30;
-    public static void swapper (int [] arr, int i, int j){
-        arr[1] = i;
-        arr[2] = j;
-        for(int m = 0; m <= 2; m++){
+    public static void swapper(int[] arr, int i, int j) {
+        arr[1] = j;
+        arr[2] = i;
+        for (int m = 0; m <= 2; m++) {
             System.out.println(arr[m]);
         }
     }
 }
+
 public class App {
 
     public void pupAge() {
@@ -185,6 +183,11 @@ public class App {
         DegreeConverter converter = new DegreeConverter();
 
         converter.convertFunction();
+
+        int[] arr = { 10, 20, 30 };
+        int i = 20;
+        int j = 30;
+        SwappInPlace.swapper(arr, i, j);
     }
 
 }
