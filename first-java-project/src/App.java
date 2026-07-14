@@ -23,7 +23,7 @@ class DegreeConverter {
     Scanner in = new Scanner(System.in);
 
     private double rounder(int decimalPlaces, double value){
-        double multiplier = 10 * decimalPlaces; 
+        double multiplier = Math.pow(10, decimalPlaces); 
         double roundedValue = Math.round(value * multiplier) / multiplier;
         return roundedValue;
     }
@@ -47,7 +47,7 @@ class DegreeConverter {
 
         tempInCels = (tempInFahr - 32) * (5.0 / 9);
 
-        tempInCels = rounder(2, tempInCels);
+        tempInCels = rounder(3, tempInCels);
         return tempInCels;
     }
 
@@ -56,7 +56,7 @@ class DegreeConverter {
 
         tempInFahr = (tempInCels * (9.0 / 5)) + 32;
 
-        tempInFahr = rounder(2, tempInFahr);
+        tempInFahr = rounder(5, tempInFahr);
         return tempInFahr;
     }
 
