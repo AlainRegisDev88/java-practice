@@ -1,76 +1,178 @@
-public class App{
+import java.util.Scanner;
 
-    public void pupAge(){
+class Adder {
+    Scanner input = new Scanner(System.in);
+
+    public int sumOfTwo() {
+        int sum = 0;
+
+        System.out.println("Enter the first number: ");
+        int num1 = input.nextInt();
+
+        System.out.println("Enter the second number: ");
+        int num2 = input.nextInt();
+
+        sum = num1 + num2;
+
+        return sum;
+    }
+
+}
+
+class DegreeConverter {
+    Scanner in = new Scanner(System.in);
+
+    private double rounder(int decimalPlaces, double value){
+        double multiplier = Math.pow(10, decimalPlaces); 
+        double roundedValue = Math.round(value * multiplier) / multiplier;
+        return roundedValue;
+    }
+
+    private double celsInput() {
+        double celsDeg;
+        System.out.println("Enter the celsius temperature: ");
+        celsDeg = in.nextDouble();
+        return celsDeg;
+    }
+
+    private double fahrInput() {
+        double fahrDeg;
+        System.out.println("Enter the fahrnheit temperature: ");
+        fahrDeg = in.nextDouble();
+        return fahrDeg;
+    }
+
+    private double fahrToCelc(double tempInFahr) {
+        double tempInCels;
+
+        tempInCels = (tempInFahr - 32) * (5.0 / 9);
+
+        tempInCels = rounder(3, tempInCels);
+        return tempInCels;
+    }
+
+    private double celsToFahr(double tempInCels) {
+        double tempInFahr;
+
+        tempInFahr = (tempInCels * (9.0 / 5)) + 32;
+
+        tempInFahr = rounder(5, tempInFahr);
+        return tempInFahr;
+    }
+
+    public void convertFunction() {
+        // input
+        System.out.println("Enter F for farhenheit to celsius conversion and C otherwise: ");
+
+        String res = in.nextLine();
+
+        if (res.equalsIgnoreCase("f")) {
+            double fahrValue = fahrInput();
+            double celsConversion = fahrToCelc(fahrValue);
+            System.out.println(fahrValue + " in celsius is: " + celsConversion);
+
+        } else if (res.equalsIgnoreCase("c")) {
+            double celsValue = celsInput();
+            double fahrConvesion = celsToFahr(celsValue);
+            System.out.println(celsValue + " in Fahrenheit is: " + fahrConvesion);
+
+        } else {
+            throw new IllegalArgumentException("Invalid input: please enter F or C");
+        }
+
+    }
+
+}
+
+public class App {
+
+    public void pupAge() {
         int age = 0;
         age += 10;
         System.out.println(age);
     }
-    public static void main(String [] args) throws Exception {
 
-        // call the instance method pupAge
+    {// COMMENTED THE FIRST MAIN METHOD FOR READABILITY
+     // public static void main(String [] args) throws Exception {
 
-        App obj = new App();
+        // // call the instance method pupAge
 
-        obj.pupAge();
+        // App obj = new App();
 
-        System.out.println("Hello World");
-        int x = 5;
-        int y = 7;
+        // obj.pupAge();
 
-        int sum = x + y;
-        System.out.println(sum);
-        
-        int total = 0;
+        // System.out.println("Hello World");
+        // int x = 5;
+        // int y = 7;
 
-        for(int i = 0; i <5 ; i++){
-            total += 1;
-        }
-        System.out.println(total);
+        // int sum = x + y;
+        // System.out.println(sum);
 
-        // testing the stack storage of the primitive variables
+        // int total = 0;
 
-        int a = 4;
-        int b = a;
-        b = 10;
+        // for(int i = 0; i <5 ; i++){
+        // total += 1;
+        // }
+        // System.out.println(total);
 
-        int [] arr1 = {1, 2, 3}; 
-        int [] arr2 = arr1; 
+        // // testing the stack storage of the primitive variables
 
-        arr2 [0] = 100;
+        // int a = 4;
+        // int b = a;
+        // b = 10;
 
-        System.out.println('\n');
-        System.out.println(arr1[0]);
+        // int [] arr1 = {1, 2, 3};
+        // int [] arr2 = arr1;
 
-        System.out.println('\n');
-        System.out.println(b);
+        // arr2 [0] = 100;
 
-        // byte check
+        // System.out.println('\n');
+        // System.out.println(arr1[0]);
 
-        byte bi = 3;
-        System.out.println(bi);
+        // System.out.println('\n');
+        // System.out.println(b);
 
-        // exercise 1
+        // // byte check
 
-        int result  = 2 + 3 * 4;
-        System.out.println("Exercise 1: " + result);
+        // byte bi = 3;
+        // System.out.println(bi);
 
-        // short-circuit evaluation 
+        // // exercise 1
 
-        boolean r = true || 5 > 6;
+        // int result = 2 + 3 * 4;
+        // System.out.println("Exercise 1: " + result);
 
-        System.out.println(r);
+        // // short-circuit evaluation
 
-        // increment operators
+        // boolean r = true || 5 > 6;
 
-        int m = 5;
-        int inc_res = m++ + ++m;
+        // System.out.println(r);
 
-        // the first increment affect the inc_res value but the second one doesn't, it increment m after operation
+        // // increment operators
 
+        // int m = 5;
+        // int inc_res = m++ + ++m;
 
-        System.out.println(inc_res);
+        // // the first increment affect the inc_res value but the second one doesn't,
+        // it increment m after operation
 
+        // System.out.println(inc_res);
+        // }}
 
-        
     }
+
+    public static void main(String[] args) {
+
+        // adder func
+        // Adder add = new Adder();
+
+        // int sum = add.sumOfTwo();
+
+        // System.out.println("The sum is: " + sum);
+
+        DegreeConverter converter = new DegreeConverter();
+
+        converter.convertFunction();
+    }
+
 }
