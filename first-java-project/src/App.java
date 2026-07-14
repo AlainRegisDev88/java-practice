@@ -20,27 +20,33 @@ class Adder {
 
 }
 
-class DegreeConverter{
-    Scanner in =  new Scanner(System.in);
-    public void input(){
+class DegreeConverter {
+    Scanner in = new Scanner(System.in);
+
+    public void input() {
 
         double fahrDeg;
         double celsDeg;
-
 
         System.out.println("Enter F for farhenheit to celcius conversion and C otherwise: ");
 
         String res = in.nextLine();
 
-        if (res.equalsIgnoreCase("f")){
+        if (res.equalsIgnoreCase("f")) {
             System.out.println("Enter the fahrnheit temperature: ");
             fahrDeg = in.nextDouble();
-        }
-        else if(res.equalsIgnoreCase("c")){
-            System.out.println("Enter the celcius temperature: ");
+        } else if (res.equalsIgnoreCase("c")) {
+            System.out.println("Enter the celciusw temperature: ");
             celsDeg = in.nextDouble();
         }
 
+    }
+
+    private double fahrToCelc(double tempInFahr) {
+        double tempInDeg;
+
+        tempInDeg = (tempInFahr - 32) * (5 / 9);
+        return tempInDeg;
     }
 }
 
