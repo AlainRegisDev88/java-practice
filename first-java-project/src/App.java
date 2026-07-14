@@ -23,43 +23,56 @@ class Adder {
 class DegreeConverter {
     Scanner in = new Scanner(System.in);
 
-    public double input() {
-
-        double fahrDeg;
+    private double celsInput() {
         double celsDeg;
+        System.out.println("Enter the celsius temperature: ");
+        celsDeg = in.nextDouble();
+        return celsDeg;
+    }
 
+    private double fahrInput() {
+        double fahrDeg;
+        System.out.println("Enter the fahrnheit temperature: ");
+        fahrDeg = in.nextDouble();
+        return fahrDeg;
+    }
+
+    private double fahrToCelc(double tempInFahr) {
+        double tempInCels;
+
+        tempInCels = (tempInFahr - 32) * (5 / 9);
+        return tempInCels;
+    }
+
+    private double celsToFahr(double tempInCels) {
+        double tempInFahr;
+
+        tempInFahr = (tempInCels * (9 / 5)) + 32;
+        return tempInFahr;
+    }
+
+    public void convertFunction() {
+        // input
         System.out.println("Enter F for farhenheit to celsius conversion and C otherwise: ");
 
         String res = in.nextLine();
 
         if (res.equalsIgnoreCase("f")) {
-            System.out.println("Enter the fahrnheit temperature: ");
-            fahrDeg = in.nextDouble();
-            return fahrDeg;
+            double fahrValue = fahrInput();
+            double celsConversion = fahrToCelc(fahrValue);
+            System.out.println(fahrValue + "in celsius is: " + celsConversion);
+
         } else if (res.equalsIgnoreCase("c")) {
-            System.out.println("Enter the celsius temperature: ");
-            celsDeg = in.nextDouble();
-            return celsDeg;
-        }else{
+            double celsValue = celsInput();
+            double fahrConvesion = celsToFahr(celsValue);
+            System.out.println(celsValue + "in Fahrenheit is: " + fahrConvesion);
+
+        } else {
             throw new IllegalArgumentException("Invalid input: please enter F or C");
-        } 
+        }
 
     }
 
-    private double fahrToCelc(double tempInFahr) {
-        double tempInDeg;
-
-        tempInDeg = (tempInFahr - 32) * (5 / 9);
-        return tempInDeg;
-    }
-    
-    private double celcToFahr(double tempInCels) {
-        double tempInDeg;
-
-        tempInDeg = (tempInCels - 32) * (5 / 9);
-        return tempInDeg;
-    }
-}
 }
 
 public class App {
