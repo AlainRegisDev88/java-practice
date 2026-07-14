@@ -1,76 +1,108 @@
-public class App{
+import java.util.Scanner;
 
-    public void pupAge(){
+class Adder {
+    Scanner input = new Scanner(System.in);
+
+    public int sumOfTwo() {
+        int sum = 0;
+
+        System.out.println("Enter the first number: ");
+        int num1 = input.nextInt();
+
+        System.out.println("Enter the second number: ");
+        int num2 = input.nextInt();
+
+        sum = num1 + num2;
+
+        return sum;
+    }
+
+}
+
+public class App {
+
+    public void pupAge() {
         int age = 0;
         age += 10;
         System.out.println(age);
     }
-    public static void main(String [] args) throws Exception {
 
-        // call the instance method pupAge
+    {// COMMENTED THE FIRST MAIN METHOD FOR READABILITY
+     // public static void main(String [] args) throws Exception {
 
-        App obj = new App();
+        // // call the instance method pupAge
 
-        obj.pupAge();
+        // App obj = new App();
 
-        System.out.println("Hello World");
-        int x = 5;
-        int y = 7;
+        // obj.pupAge();
 
-        int sum = x + y;
-        System.out.println(sum);
-        
-        int total = 0;
+        // System.out.println("Hello World");
+        // int x = 5;
+        // int y = 7;
 
-        for(int i = 0; i <5 ; i++){
-            total += 1;
-        }
-        System.out.println(total);
+        // int sum = x + y;
+        // System.out.println(sum);
 
-        // testing the stack storage of the primitive variables
+        // int total = 0;
 
-        int a = 4;
-        int b = a;
-        b = 10;
+        // for(int i = 0; i <5 ; i++){
+        // total += 1;
+        // }
+        // System.out.println(total);
 
-        int [] arr1 = {1, 2, 3}; 
-        int [] arr2 = arr1; 
+        // // testing the stack storage of the primitive variables
 
-        arr2 [0] = 100;
+        // int a = 4;
+        // int b = a;
+        // b = 10;
 
-        System.out.println('\n');
-        System.out.println(arr1[0]);
+        // int [] arr1 = {1, 2, 3};
+        // int [] arr2 = arr1;
 
-        System.out.println('\n');
-        System.out.println(b);
+        // arr2 [0] = 100;
 
-        // byte check
+        // System.out.println('\n');
+        // System.out.println(arr1[0]);
 
-        byte bi = 3;
-        System.out.println(bi);
+        // System.out.println('\n');
+        // System.out.println(b);
 
-        // exercise 1
+        // // byte check
 
-        int result  = 2 + 3 * 4;
-        System.out.println("Exercise 1: " + result);
+        // byte bi = 3;
+        // System.out.println(bi);
 
-        // short-circuit evaluation 
+        // // exercise 1
 
-        boolean r = true || 5 > 6;
+        // int result = 2 + 3 * 4;
+        // System.out.println("Exercise 1: " + result);
 
-        System.out.println(r);
+        // // short-circuit evaluation
 
-        // increment operators
+        // boolean r = true || 5 > 6;
 
-        int m = 5;
-        int inc_res = m++ + ++m;
+        // System.out.println(r);
 
-        // the first increment affect the inc_res value but the second one doesn't, it increment m after operation
+        // // increment operators
 
+        // int m = 5;
+        // int inc_res = m++ + ++m;
 
-        System.out.println(inc_res);
+        // // the first increment affect the inc_res value but the second one doesn't,
+        // it increment m after operation
 
+        // System.out.println(inc_res);
+        // }}
 
-        
     }
+
+    public static void main(String[] args) {
+
+        Adder add = new Adder();
+
+        int sum = add.sumOfTwo();
+
+        System.out.println("The sum is: " + sum);
+    }
+
 }
