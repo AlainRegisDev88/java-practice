@@ -84,6 +84,18 @@ class DegreeConverter {
 
 }
 
+class SwappInPlace {
+    int [] arr = {10, 20, 30};
+    int i = 20;
+    int j = 30;
+    public static void swapper (int [] arr, int i, int j){
+        arr[1] = i;
+        arr[2] = j;
+        for(int m = 0; m <= 2; m++){
+            System.out.println(arr[m]);
+        }
+    }
+}
 public class App {
 
     public void pupAge() {
