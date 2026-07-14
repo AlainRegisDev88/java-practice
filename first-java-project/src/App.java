@@ -31,14 +31,14 @@ class DegreeConverter {
     private double celsInput() {
         double celsDeg;
         System.out.println("Enter the celsius temperature: ");
-        celsDeg = in.nextDouble();
+        celsDeg = Double.parseDouble(in.nextLine());
         return celsDeg;
     }
 
     private double fahrInput() {
         double fahrDeg;
         System.out.println("Enter the fahrnheit temperature: ");
-        fahrDeg = in.nextDouble();
+        fahrDeg = Double.parseDouble(in.nextLine());
         return fahrDeg;
     }
 
