@@ -170,9 +170,9 @@ public class App {
 
         // System.out.println("The sum is: " + sum);
 
-        DegreeConverter convert1 = new DegreeConverter();
+        DegreeConverter converter = new DegreeConverter();
 
-        convert1.convertFunction();
+        converter.convertFunction();
     }
 
 }
