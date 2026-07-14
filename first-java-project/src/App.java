@@ -1,4 +1,3 @@
-import java.security.DrbgParameters.Reseed;
 import java.util.Scanner;
 
 class Adder {
@@ -60,12 +59,12 @@ class DegreeConverter {
         if (res.equalsIgnoreCase("f")) {
             double fahrValue = fahrInput();
             double celsConversion = fahrToCelc(fahrValue);
-            System.out.println(fahrValue + "in celsius is: " + celsConversion);
+            System.out.println(fahrValue + " in celsius is: " + celsConversion);
 
         } else if (res.equalsIgnoreCase("c")) {
             double celsValue = celsInput();
             double fahrConvesion = celsToFahr(celsValue);
-            System.out.println(celsValue + "in Fahrenheit is: " + fahrConvesion);
+            System.out.println(celsValue + " in Fahrenheit is: " + fahrConvesion);
 
         } else {
             throw new IllegalArgumentException("Invalid input: please enter F or C");
@@ -154,11 +153,16 @@ public class App {
 
     public static void main(String[] args) {
 
-        Adder add = new Adder();
+        // adder func
+        // Adder add = new Adder();
 
-        int sum = add.sumOfTwo();
+        // int sum = add.sumOfTwo();
 
-        System.out.println("The sum is: " + sum);
+        // System.out.println("The sum is: " + sum);
+
+        DegreeConverter convert1 = new DegreeConverter();
+
+        convert1.convertFunction();
     }
 
 }
