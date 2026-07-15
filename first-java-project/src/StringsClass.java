@@ -1,4 +1,17 @@
 public class StringsClass {
+
+    class checkToUpperCaseEffect{
+        public static Boolean doesToUpperChangeTheOriginalString(){
+            String text = "abc";
+            text.toUpperCase();
+            if (text.equals("abc")){
+                return false;
+            }
+            return true;
+        }
+    } 
+
+
     public static void main(String [] args){
         String text = "    Ashesi University    ";
         System.out.println(text);
@@ -18,5 +31,9 @@ public class StringsClass {
 
         // getting typeof() => python:  java version
         System.out.println(incString.getClass().getSimpleName());
+
+        // check if the touppercase modify the original string
+
+        System.out.println(checkToUpperCaseEffect.doesToUpperChangeTheOriginalString());
     }
 }
