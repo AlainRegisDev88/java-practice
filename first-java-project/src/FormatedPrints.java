@@ -16,8 +16,11 @@ public class FormatedPrints {
         public static void itemsTable(){
             System.out.printf("|%-10s|%-10s|%n", "Item", "Quantity");
 
-            int itemsCount =  shoppingList.size();
-            System.out.println(itemsCount);
+            // int itemsCount =  shoppingList.size();
+            
+            shoppingList.forEach((item, quantity)->{
+                System.out.printf("|%-10s|%-10s|%n", item, quantity);
+            });
         }
     }
 
