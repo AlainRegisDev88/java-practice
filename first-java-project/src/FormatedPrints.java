@@ -25,7 +25,18 @@ public class FormatedPrints {
     }
 
 
+
     public static void main(String[] args) {
         ItemsTable.itemsTable();
+
+        double a = 56.69293934;
+        int b = 5;
+
+        // rounded outputs
+        System.out.printf("Number rounded off by 2: %.2f%n", a);
+        System.out.printf("Number rounded off by 4: %.4f%n", a);
+
+        // trailing zeros
+        System.out.printf("ID: %05d%n", b);
     }
 }
