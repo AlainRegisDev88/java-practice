@@ -34,9 +34,9 @@ class RandomNumber{
             guess = getNumber();
 
             if(guess == randomNum){
-                System.out.println("Absolutely spot on!! :)");
+                System.out.println("Absolutely spot on!! 🥳🎉🎉🎉🎈");
                 System.out.print("It took you " + guesses + " guesses");
-                System.out.println(guesses > 5 ? "You can do better🥲": "That's impressive 😊");
+                System.out.println(guesses > 5 ? " You can do better🥲": " That's impressive 😊");
             }
 
             else{
