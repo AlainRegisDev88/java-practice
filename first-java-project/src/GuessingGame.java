@@ -11,6 +11,7 @@ class RandomNumber{
      private int getNumber(){
         Scanner in = new Scanner(System.in);
         int number = Integer.parseInt(in.nextLine());
+        in.close();
         return number;
      }
 
@@ -21,6 +22,8 @@ class RandomNumber{
         System.out.println("Aim for lower guesses");
         System.out.println("");
         System.out.print("Let's start, enter your guess: ");
+
+        int guess = 
     }
 }
 
