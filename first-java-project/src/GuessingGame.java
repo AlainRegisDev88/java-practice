@@ -2,6 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 class RandomNumber{
+    static Scanner in = new Scanner(System.in);
 
     private static int randomize(){
         Random rand = new Random();
@@ -9,9 +10,7 @@ class RandomNumber{
         return randomNumber;
     }
      private static int getNumber(){
-        Scanner in = new Scanner(System.in);
         int number = Integer.parseInt(in.nextLine());
-        in.close();
         return number;
      }
 
@@ -29,19 +28,51 @@ class RandomNumber{
         int guesses = 0;
 
         do{
+            if (guesses != 0) {
+                System.out.print("Guess Again...: ");
+            }
             guess = getNumber();
 
             if(guess == randomNum){
                 System.out.println("Absolutely spot on!! :)");
-                System.out.print("It took you " + guesses + "guesses");
+                System.out.print("It took you " + guesses + " guesses");
                 System.out.println(guesses > 5 ? "You can do better🥲": "That's impressive 😊");
             }
 
             else{
-                System.out.println();
-            }
+                System.out.println("That's not quite right");
+                if(guesses == 0){
+                    System.out.println("No pressure that was your first guess😊");
+                }
+                if(guesses >0 && guesses<=3){
+                    System.out.println("Try again!!!");
+                }
 
+                if(guesses >3 && guesses<=7){
+                    System.out.println("Come on bruv, lock in😊");
+                }
+                if(guesses == 7){
+                    System.out.println("I've given up on you for real🥲");
+                }
+
+                if (randomNum > guess){
+                    System.out.println("Your guess is lower than the number");
+                }
+                else{
+                    System.out.println("Your guess is higher than the number");
+                }
+
+                System.out.print("Do you wanna go again or you gave up? press 0 to quit, 1 to keep guessing :): ");
+
+                giveUp = Integer.parseInt(in.nextLine());
+                
+                guesses++;
+            }
         }while(giveUp != 0);
+
+        if (giveUp == 0){
+            System.out.println("The number was: " + randomNum + ": you lost :(");
+        }
 
 
     }
