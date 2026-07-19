@@ -64,6 +64,19 @@ class MonthGuesser{
     
 }
 
+class LabeledIf {
+    public static void firstProductGreaterThan45(){
+        outer:
+        for (int i = 0; i <= 20; i++){
+            for (int j = 0; j <= i; j++){
+                if( (i*j) > 45){
+                    System.out.println("The values were:" + i + " and " + j);
+                    break outer;
+                }
+            }
+        }
+    }
+}
 public class ConditionalStatements {
     
     public static void main(String[] args){
