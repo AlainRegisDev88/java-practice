@@ -50,18 +50,17 @@ class MonthGuesser{
 
     public static String guessDayModern(int number){
         String month = switch (number){
-            case 1 -> ("Monday");
-            case 2 -> ("Tuesday");
-            case 3 -> ("Monday");
-            case 4 -> ("Monday");
-            case 5 -> ("Monday");
-            case 6 -> ("Monday");
-            case 7 -> ("Monday");
-            
-
+            case 1 -> ("Montag");
+            case 2 -> ("Dienstag");
+            case 3 -> ("Mittwoch");
+            case 4 -> ("Donnerstag");
+            case 5 -> ("Freitag");
+            case 6 -> ("Samstag");
+            case 7 -> ("Sonntag");
             default ->("Perhaps wrong input");
 
-        }
+        };
+        return (month);
     }
 }
 
@@ -69,7 +68,6 @@ public class ConditionalStatements {
 
     public static void main(String[] args){
         MonthGuesser.guessMonth(3);
-    }
 
-    
+    }
 }
