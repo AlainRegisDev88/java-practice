@@ -16,7 +16,7 @@ class RandomNumber{
 
     public static void randomNumberGame(){
         System.out.println("Welcome to our guessing game:");
-        System.out.println("I will set a number and you will guess until you get it!!:");
+        System.out.println("I will set a number between 0-100 and you will guess until you get it!!:");
         System.out.println("I will tell you if the number is higher or lower than your guess");
         System.out.println("Aim for lower guesses");
         System.out.println("");
