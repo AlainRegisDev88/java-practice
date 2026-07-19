@@ -77,6 +77,8 @@ class LabeledIf {
         }
     }
 }
+
+
 public class ConditionalStatements {
     
     public static void main(String[] args){
@@ -94,6 +96,16 @@ public class ConditionalStatements {
 
         LabeledIf.firstProductGreaterThan45();
 
+        // do...while
+
+        int choice;
+        do{
+            System.out.println("Enter one to play and zero to quit: ");
+            choice = Integer.parseInt(in.nextLine());
+
+        }while(choice != 0);
+
         in.close();
+
     }
 }
