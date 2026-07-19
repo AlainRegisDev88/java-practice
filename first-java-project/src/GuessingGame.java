@@ -23,10 +23,27 @@ class RandomNumber{
         System.out.println("");
         System.out.print("Let's start, enter your guess: ");
 
-        int guess = getNumber();
+        int guess;
         int randomNum = randomize();
+        int giveUp = 1;
+        int guesses = 0;
 
-        
+        do{
+            guess = getNumber();
+
+            if(guess == randomNum){
+                System.out.println("Absolutely spot on!! :)");
+                System.out.print("It took you " + guesses + "guesses");
+                System.out.println(guesses > 5 ? "You can do better🥲": "That's impressive 😊");
+            }
+
+            else{
+                System.out.println();
+            }
+
+        }while(giveUp != 0);
+
+
     }
 }
 
