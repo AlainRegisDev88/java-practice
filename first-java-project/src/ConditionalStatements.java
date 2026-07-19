@@ -90,6 +90,10 @@ public class ConditionalStatements {
         float score = Float.parseFloat(in.nextLine());
         System.out.println(score>=50 ? "Pass": "Fail");
 
+        // break outer
+
+        LabeledIf.firstProductGreaterThan45();
+
         in.close();
     }
 }
