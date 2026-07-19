@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+class MonthGuesser{
+    Scanner in = new Scanner(System.in);
+    public static void guessMonth(int number){
+        switch (number) {
+            case 1:
+                System.out.println("January");
+                break;
+            case 2:
+                System.out.println("February");
+                break;
+            case 3:
+                System.out.println("March");
+                break;
+            case 4:
+                System.out.println("April");
+                break;
+            case 5:
+                System.out.println("May");
+                break;
+            case 6:
+                System.out.println("Juni");
+                break;
+            case 7:
+                System.out.println("Juli");
+                break;
+            case 8:
+                System.out.println("August");
+                break;
+            case 9:
+                System.out.println("September");
+                break;
+            case 10:
+                System.out.println("October");
+                break; 
+            case 11:
+                System.out.println("November");
+                break;
+            case 12:
+                System.out.println("December");
+                break;   
+        
+            default:
+                System.out.println("Wrong input!");
+                break;
+        }
+    }
+    
+
+    public static String guessDayModern(int number){
+        String month = switch (number){
+            case 1 -> ("Monday");
+            case 2 -> ("Tuesday");
+            case 3 -> ("Monday");
+            case 4 -> ("Monday");
+            case 5 -> ("Monday");
+            case 6 -> ("Monday");
+            case 7 -> ("Monday");
+            
+
+            default ->("Perhaps wrong input");
+
+        }
+    }
+}
+
+public class ConditionalStatements {
+
+    public static void main(String[] args){
+        MonthGuesser.guessMonth(3);
+    }
+
+    
+}
