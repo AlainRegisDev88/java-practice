@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 class RandomNumber{
 
-    private int randomize(){
+    private static int randomize(){
         Random rand = new Random();
         int randomNumber = rand.nextInt(101);
         return randomNumber;
     }
-     private int getNumber(){
+     private static int getNumber(){
         Scanner in = new Scanner(System.in);
         int number = Integer.parseInt(in.nextLine());
         in.close();
@@ -23,7 +23,10 @@ class RandomNumber{
         System.out.println("");
         System.out.print("Let's start, enter your guess: ");
 
-        int guess = 
+        int guess = getNumber();
+        int randomNum = randomize();
+
+        
     }
 }
 
