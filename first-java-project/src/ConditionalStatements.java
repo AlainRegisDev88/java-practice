@@ -65,10 +65,16 @@ class MonthGuesser{
 }
 
 public class ConditionalStatements {
-
+    
     public static void main(String[] args){
+        Scanner in  = new Scanner(System.in);
         MonthGuesser.guessMonth(3);
         String Day = MonthGuesser.guessDayModern(7);
         System.out.println(Day);
+
+        // ternary operator
+        System.out.println("Enter the score between 0 aand 100: ");
+        float score = Float.parseFloat(in.nextLine());
+        System.out.println(score>=50 ? "Pass": "Fail");
     }
 }
