@@ -101,13 +101,23 @@ class Grids{
     public static void reverseTriangle(){
         for(int i = 0; i <= 4; i++){
             
+            
+        }
+    }
+
+    public static void pyramid(){
+        for(int i = 0; i <= 4; i++){
             for (int k = 3; k>=i; k--){
                 System.out.print(" ");
             }
             for (int j = 0; j <= i; j++){
                 System.out.print("*");
             }
-            System.out.println();
+            for(int m = 0; m < i; m++){
+                System.out.print("*");
+            }
+            System.out.println("");
+           
         }
     }
 }
@@ -141,6 +151,7 @@ public class ConditionalStatements {
         Grids.fiveByFiveGrid();
         Grids.triangle();
         Grids.reverseTriangle();
+        Grids.pyramid();
 
         in.close();
 
