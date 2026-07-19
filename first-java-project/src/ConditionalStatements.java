@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 class MonthGuesser{
-    Scanner in = new Scanner(System.in);
     public static void guessMonth(int number){
         switch (number) {
             case 1:
@@ -62,6 +61,7 @@ class MonthGuesser{
         };
         return (day);
     }
+    
 }
 
 public class ConditionalStatements {
@@ -76,5 +76,7 @@ public class ConditionalStatements {
         System.out.println("Enter the score between 0 aand 100: ");
         float score = Float.parseFloat(in.nextLine());
         System.out.println(score>=50 ? "Pass": "Fail");
+
+        in.close();
     }
 }
