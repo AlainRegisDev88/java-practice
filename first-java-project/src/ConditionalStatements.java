@@ -79,31 +79,48 @@ class LabeledIf {
 }
 
 
+class Grids{
+    public static void fiveByFiveGrid(){
+        for(int i = 0; i <= 4; i++){
+            for (int j = 0; j <= 4; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
+}
+
 public class ConditionalStatements {
     
     public static void main(String[] args){
         Scanner in  = new Scanner(System.in);
-        MonthGuesser.guessMonth(3);
-        String Day = MonthGuesser.guessDayModern(7);
-        System.out.println(Day);
+        // MonthGuesser.guessMonth(3);
+        // String Day = MonthGuesser.guessDayModern(7);
+        // System.out.println(Day);
 
-        // ternary operator
-        System.out.println("Enter the score between 0 aand 100: ");
-        float score = Float.parseFloat(in.nextLine());
-        System.out.println(score>=50 ? "Pass": "Fail");
+        // // ternary operator
+        // System.out.println("Enter the score between 0 aand 100: ");
+        // float score = Float.parseFloat(in.nextLine());
+        // System.out.println(score>=50 ? "Pass": "Fail");
 
-        // break outer
+        // // break outer
 
-        LabeledIf.firstProductGreaterThan45();
+        // LabeledIf.firstProductGreaterThan45();
 
-        // do...while
+        // // do...while
 
-        int choice;
-        do{
-            System.out.println("Enter one to play and zero to quit: ");
-            choice = Integer.parseInt(in.nextLine());
+        // int choice;
+        // do{
+        //     System.out.println("Enter one to play and zero to quit: ");
+        //     choice = Integer.parseInt(in.nextLine());
 
-        }while(choice != 0);
+        // }while(choice != 0);
+
+        Grids.fiveByFiveGrid();
+        Grids.triangle();
+        Grids.reverseTriangle();
 
         in.close();
 
