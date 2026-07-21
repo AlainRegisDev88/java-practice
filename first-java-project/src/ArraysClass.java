@@ -26,6 +26,7 @@ class RandomArray {
 public class ArraysClass {
     public static void main(String[] args) {
         int[] sortedArray = RandomArray.randomArraySorted();
+        System.out.println("Random Sorted Array: ");
         for(int i=0; i<10; i++){
             System.out.print(sortedArray[i] + ", ");
         }
@@ -33,6 +34,7 @@ public class ArraysClass {
         System.out.println();
 
         int[] unsortedArray = RandomArray.randomArrayUnsorted();
+        System.out.println("Random Unsorted Array: ");
         for(int i=0; i<10; i++){
             System.out.print(unsortedArray[i] + ", ");
         }
