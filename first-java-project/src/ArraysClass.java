@@ -2,7 +2,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
-class printingRandomArray {
+class RandomArray {
     static int[] randomNumbers = new int[10];
     static Random rand =  new Random();
     public static int[] randomArrayUnsorted() {
@@ -25,6 +25,10 @@ class printingRandomArray {
 
 public class ArraysClass {
     public static void main(String[] args) {
-
+        int[] sortedArray = RandomArray.randomArraySorted();
+        for(int i=0; i<10; i++){
+            System.out.println(sortedArray[i]);
+        }
+        
     }
 }
