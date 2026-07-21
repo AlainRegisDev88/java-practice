@@ -4,12 +4,20 @@ import java.util.Random;
 
 class printingRandomArray {
     static int[] randomNumbers = new int[10];
-
+    static Random rand =  new Random();
     public static int[] randomArrayUnsorted() {
-        Random rand =  new Random();
+        
         for (int i = 0; i < 10; i++) {
             randomNumbers[i] = rand.nextInt(100);
         }
+        return randomNumbers;
+    }
+
+    public static int[] randomArraySorted(){
+        for (int i = 0; i < 10; i++) {
+            randomNumbers[i] = rand.nextInt(100);
+        }
+        Arrays.sort(randomNumbers);
         return randomNumbers;
     }
 
