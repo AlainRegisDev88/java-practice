@@ -27,8 +27,14 @@ public class ArraysClass {
     public static void main(String[] args) {
         int[] sortedArray = RandomArray.randomArraySorted();
         for(int i=0; i<10; i++){
-            System.out.println(sortedArray[i]);
+            System.out.print(sortedArray[i] + ", ");
         }
         
+        System.out.println();
+
+        int[] unsortedArray = RandomArray.randomArrayUnsorted();
+        for(int i=0; i<10; i++){
+            System.out.print(unsortedArray[i] + ", ");
+        }
     }
 }
