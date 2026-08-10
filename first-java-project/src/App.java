@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 class Adder {
+    /**
+     * @param num1 the first number
+     * @param num2 the second number
+     * @return the sum of two numbers num1 and num2
+     * @throws
+     * Adder
+     */
     Scanner input = new Scanner(System.in);
 
     public int sumOfTwo() {
@@ -20,6 +27,11 @@ class Adder {
 }
 
 class DegreeConverter {
+    /**
+     * @param celsDeg the celsius value
+     * @param fahrdeg the fahrenheit value
+     * @return tempinFahr, tempInCels
+     */
     Scanner in = new Scanner(System.in);
 
     private double rounder(int decimalPlaces, double value) {
