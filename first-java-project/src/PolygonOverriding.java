@@ -41,8 +41,13 @@ public class PolygonOverriding {
         Polygon poly =  new Polygon();
         String defaultPolygon = poly.describe();
         System.out.println(defaultPolygon);
+
+        
+        Vehicle obj = new Rectangle();
+
+        
+
     }
-    
 
-
+ 
 }
