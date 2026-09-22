@@ -1,3 +1,5 @@
+package intro;
+
 class Polygon{
     int sides;
     String name;

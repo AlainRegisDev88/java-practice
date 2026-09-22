@@ -1,3 +1,5 @@
+package intro;
+
 import java.util.Scanner;
 
 class Adder {
@@ -192,14 +194,21 @@ public class App {
 
         // System.out.println("The sum is: " + sum);
 
-        DegreeConverter converter = new DegreeConverter();
+        // DegreeConverter converter = new DegreeConverter();
 
-        converter.convertFunction();
+        // converter.convertFunction();
 
-        int[] arr = { 10, 20, 30 };
-        int i = 20;
-        int j = 30;
-        SwappInPlace.swapper(arr, i, j);
+        // int[] arr = { 10, 20, 30 };
+        // int i = 20;
+        // int j = 30;
+        // SwappInPlace.swapper(arr, i, j);
+
+        // for(int i = 0; i < 5; i++){
+        //     for(int j = 0; j <= i ; j++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        // }
     }
 
 }

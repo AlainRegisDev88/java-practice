@@ -1,3 +1,5 @@
+package intro;
+
 
 class Payment {
     double amount;
