@@ -21,5 +21,6 @@ public class AddConsecutiveIntegers {
 
     public static void main(String[] args) {
         AddConsecutiveIntegers adder = new AddConsecutiveIntegers(1, 9);
+        System.out.println(adder.sum);
     }
 }
